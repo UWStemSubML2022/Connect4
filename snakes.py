@@ -8,6 +8,41 @@ import random
 # This function does not need to return anything.
 def print_board(board_array):
     print("Printing board")
+    extra_line = "     |     |     |     |     |     |"
+    new_line = "\n-----|-----|-----|-----|-----|-----|\n"
+    
+    print(extra_line)
+    print(" ", board_array[0][0], " | ", board_array[0][1], " | ", board_array[0][2] ," | ", board_array[0][3], " | ", board_array[0][4], " | ", board_array[0][5])
+    print(new_line)
+    print(" ", board_array[1][0], " | ", board_array[1][1]," | ", board_array[1][2] , "  | ", board_array[1][3], " | ", board_array[1][4], " | ", board_array[1][5])
+    print(new_line)
+    print(" ", board_array[2][0], " | ", board_array[2][1], " | ", board_array[2][2],  " | ", board_array[2][3], " | ", board_array[2][4], " | ", board_array[2][5])
+    print(extra_line)
+    print(" ", board_array[3][0], " | ", board_array[3][1], " | ", board_array[3][2], " | ", board_array[3][3], " | ", board_array[3][4], " | ", board_array[3][5])
+    print(extra_line) 
+    print(" ", board_array[4][0], " | ", board_array[4][1], " | ", board_array[4][2], " | ", board_array[4][3], " | ", board_array[4][4], " | ", board_array[4][5])
+    print(extra_line)
+    print(" ", board_array[5][0], " | ", board_array[5][1], " | ", board_array[5][2], " | ", board_array[5][3], " | ", board_array[5][4], " | ", board_array[5][5])
+
+    return
+
+    def init_board():
+        print("Initializing a new board")
+        board = np.array([[" ", " ", " ", " ", " ", " "],
+                          [" ", " ", " ", " ", " ", " "],
+                          [" ", " ", " ", " ", " ", " "],
+                          [" ", " ", " ", " ", " ", " "],
+                          [" ", " ", " ", " ", " ", " "],
+                          [" ", " ", " ", " ", " ", " "]])
+        return board 
+
+
+
+
+
+
+
+    
 
 # Write a function that creates a blank array of the 
 # correct size and shape to represent your board.
@@ -90,12 +125,18 @@ def play_game():
     print("Entering play game")
 
     # declare the board options
-    board_options = np.array([['0', '1', '2'],
-                              ['3', '4', '5'],
-                              ['6', '7', '8']])
+    board_options = np.array([['0', '1', '2', '3', '4', '5'],
+                              ['6', '7', '8', '9', '10', '11'],
+                              ['12', '13', '14', '15', '16', '17'],
+                             ['18', '19', '20', '21', '22', '23'],
+                              ['24', '25', '26', '27', '28', '29'],
+                              ['30', '31', '32', '33', '34', '35']])
+
+                              
 
     # print the board options
     print_board(board_options)
+    
 
     # initialize the board
     board = init_board()
